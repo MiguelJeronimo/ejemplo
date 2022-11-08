@@ -30,13 +30,14 @@ class Panel : AppCompatActivity(), MenuItem.OnMenuItemClickListener {
         setContentView(R.layout.activity_panel)
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-
         drawerLayout = findViewById(R.id.navegacion)
+        //Agrega utilidades a la toolbar, asi como el incono de hamburguesa, y los iconos de cuando se despliegue el menu y cuando este cerrado
         actionBarDrawerToggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.nav_open,R.string.nav_close)
+        //agrega el evento al drawelayout, recibe por parametro el actionBarDrawerToggle en la cual se encuentra las animaciones
         drawerLayout.addDrawerListener(actionBarDrawerToggle)
+        //sincroniza los estados del navigationDrawer
         actionBarDrawerToggle.syncState()
         navigationView = findViewById(R.id.barraNavegacion)
-
         //a cada item del menuo agregamos su evento MenuItemClickListener
         navigationView.menu.findItem(R.id.agregar).setOnMenuItemClickListener(this)
         navigationView.menu.findItem(R.id.item2).setOnMenuItemClickListener(this)
@@ -46,7 +47,7 @@ class Panel : AppCompatActivity(), MenuItem.OnMenuItemClickListener {
         val intent:Intent = Intent(this, ventana::class.java)
         startActivity(intent)
     }
-
+    //eventos de menuClick del los submenus del navigationDrawer
     override fun onMenuItemClick(p0: MenuItem?): Boolean {
         when(p0?.itemId){
             R.id.agregar->{
@@ -56,7 +57,6 @@ class Panel : AppCompatActivity(), MenuItem.OnMenuItemClickListener {
         }
         return true
     }
-
 }
 
 
