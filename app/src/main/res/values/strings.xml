@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Ejemplo</string>
     <string name="title_activity_panel">Panel</string>
+    <string name="nada">NADA</string>
     <string name="titulo_segunda_activity">Dashboard</string>
     <!-- to toggle the open close button of the navigation drawer -->
     <string name="nav_open">Open</string>

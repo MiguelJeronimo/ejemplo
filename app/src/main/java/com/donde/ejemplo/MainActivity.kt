@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnEnviar = findViewById(R.id.enviar)
         btnEnviar.setOnClickListener(this)
 
-
     }
 
     override fun onClick(p0: View?) {
